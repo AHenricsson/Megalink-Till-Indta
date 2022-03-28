@@ -14,7 +14,7 @@ def main():
             indtaReader = csv.reader(csvfile, delimiter=';', quotechar='"')
             with open(resultatFil,'w', newline='') as results:
                 writer = csv.writer(results, delimiter=';',quotechar='"')
-                for n,row in enumerate(indtaReader):
+                for row in indtaReader:
                     name = row[9].upper()+ " " +row[8]
                     if name in mlDict:
                         mlRow = mlDict[name]
